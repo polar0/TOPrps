@@ -1,23 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./styles.css">
-    <script type="module" src="./main.js"></script>
-    <title>TOP - Rock, Paper, Scissors</title>
-</head>
-<body>
-    <button id="Rock">Rock</button>
-    <button id="Paper">Paper</button>
-    <button id="Scissors">Scissors</button>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles.css" />
+    <script type="module" src="./main.js" defer></script>
+    <title>TOP - Potion, Spell, Sword!</title>
+  </head>
+  <body>
+    <div class="content">
+      <h1><del>Rock, Paper, Scissors</del></h1>
+      <h1 class="remastered">POTION, SPELL, SWORD!</h1>
+      <div class="buttons">
+        <div class="img">
+          <input type="image" src="./images/rock-magicPotion.svg" id="Potion" />
+          <h3>Potion</h3>
+        </div>
+        <div class="img">
+          <input type="image" src="./images/paper-spell.svg" id="Spell" />
+          <h3>Spell</h3>
+        </div>
+        <div class="img">
+          <input type="image" src="./images/scissors-sword.svg" id="Sword" />
+          <h3>Sword</h3>
+        </div>
+      </div>
 
-    <div id="container">
+      <div id="container">
+        <div class="score-container">
+          <div class="title">
+            <h3>You</h3>
+            <h3>The enemy</h3>
+          </div>
+          <div class="count">
+            <div id="playerScore">0</div>
+            <div id="computerScore">0</div>
+          </div>
+        </div>
+        <h2>Round</h2>
         <div id="newResult"></div>
+        <!-- <h2>History</h2> -->
         <div id="oldResult"></div>
-        <div id="score"></div>
-        <div id="finalScore"></div>
+
+        <div id="instructions">
+          <p>> Potion melts Sword</p>
+          <p>> Spell turns Potion against its owner</p>
+          <p>> Sword tears the Spell apart</p>
+          <br />
+          First to 5 points wins
+        </div>
+
+        <div id="finalScore">
+          <div id="p1"></div>
+          <div id="p2"></div>
+        </div>
+      </div>
+
+      <div class="footer">Favicon by Made x Made from he Noun Project</div>
     </div>
-</body>
+  </body>
 </html>

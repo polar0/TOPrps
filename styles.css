@@ -1,3 +1,371 @@
 #oldResult {
-    white-space: pre
+  white-space: pre;
+}
+
+body {
+  background: linear-gradient(-45deg, #141319, #141319, #242038);
+  background-size: 200% 200%;
+  -webkit-animation: gradient 10s linear infinite;
+  -moz-animation: gradient 10s linear infinite;
+  -ms-animation: gradient 10s linear infinite;
+  -o-animation: gradient 10s linear infinite;
+  animation: gradient 10s linear infinite;
+  font-family: Chalkduster, fantasy;
+  overflow: visible; /* switch to hidden after */
+
+  height: 100%;
+  margin: 0;
+  padding: 0;
+
+  display: flex;
+  justify-content: center;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 0%;
+  }
+  50% {
+    background-position: 100% 0%;
+  }
+  100% {
+    background-position: 0% 0%;
+  }
+}
+
+@keyframes fadein {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.content {
+  width: 80%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+
+h1 {
+  color: white;
+  font-size: 32px;
+  text-shadow: 3px 3px #242038;
+  animation: fadein 2s;
+}
+
+h1.remastered {
+  font-size: 28px;
+  font-style: italic;
+  font-weight: 200;
+  letter-spacing: 2px;
+  text-shadow: 3px 3px #322a57;
+  animation: fadein 4s;
+}
+
+h2 {
+  color: white;
+  animation: fadein 10s;
+}
+
+h3 {
+  color: white;
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  gap: 0px;
+  animation: fadein 6s;
+}
+
+.buttons:hover {
+}
+
+.img {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+input {
+  /* width: 60%; */
+  width: 30%;
+  height: auto;
+  filter: invert(0.5) brightness(100);
+  transition: width 0.5s, transform 0.5s;
+}
+
+input:hover {
+  filter: invert(0.5) brightness(100) drop-shadow(6px 6px 12px #e63452);
+  width: 35%;
+  /* transform: rotate(30deg); */
+}
+
+.animate-user-button {
+  animation: spin 0.5s linear;
+}
+
+.animate-button-end {
+  animation: shake 0.5s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
+  transform: translate3d(0, 0, 0);
+}
+
+.animate-computer-button-left {
+  animation: pump 1s ease, rotateleft 1s ease;
+  width: 35%;
+}
+
+.animate-computer-button-right {
+  animation: pump 1s ease, rotateright 1s ease;
+  width: 35%;
+}
+
+.animate-button-same {
+  animation: explode 1s linear;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(30deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes shake {
+  10%,
+  90% {
+    transform: translate3d(-1px, 0, 0);
+  }
+  20%,
+  80% {
+    transform: translate3d(2px, 0, 0);
+  }
+  30%,
+  50%,
+  70% {
+    transform: translate3d(-4px, 0, 0);
+  }
+  40%,
+  60% {
+    transform: translate3d(4px, 0, 0);
+  }
+}
+
+@keyframes pump {
+  0%,
+  100% {
+    filter: invert(1);
+  }
+  50% {
+    filter: invert(0.5) brightness(100) drop-shadow(6px 6px 12px #e63452);
+  }
+}
+
+@keyframes rotateleft {
+  0%,
+  100% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(-30deg);
+  }
+}
+
+@keyframes rotateright {
+  0%,
+  100% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(30deg);
+  }
+}
+
+@keyframes explode {
+  0%,
+  100% {
+    transform: scale(1, 1);
+  }
+  20%,
+  40%,
+  60%,
+  80% {
+    transform: scale(0.5, 1);
+  }
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    transform: scale(1, 1);
+  }
+}
+
+#container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  height: auto;
+}
+
+#container div {
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+}
+
+#newResult {
+  border: dashed 2px white;
+  color: white;
+  align-items: center;
+  width: 100%;
+  height: 30px;
+  animation: fadein 10s;
+}
+
+#oldResult {
+  border: dashed 1px white;
+  color: white;
+  width: 100%;
+  height: 90px;
+  animation: fadein 10s;
+}
+
+.score-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  animation: fadein 8s;
+}
+
+.score-container .count,
+.score-container .title {
+  display: flex;
+  width: 100%;
+  gap: 50px;
+}
+
+.score-container .count div {
+  border: dashed 2px white;
+  color: white;
+  text-align: center;
+  font-size: 24px;
+  flex: 1;
+}
+
+.score-container .title h3 {
+  text-align: center;
+  flex: 1;
+  margin-bottom: 0;
+}
+
+#finalScore {
+  display: flex;
+  flex-direction: column;
+  /* font-size: 16px; */
+  margin-bottom: 0;
+  animation: fadein 2s;
+}
+
+#finalScore p {
+  font-size: 24px;
+  color: white;
+}
+
+button {
+  font-family: Chalkduster, fantasy;
+  font-size: 18px;
+  letter-spacing: 0.5px;
+  color: white;
+  background-color: #a64253;
+  border: 3px dashed;
+  box-shadow: 10px 15px 200px #a64253;
+
+  margin-top: 50px;
+  padding: 10px;
+  cursor: pointer;
+}
+
+#instructions {
+  color: white;
+  font-size: 20px;
+  font-weight: 200;
+  text-align: left;
+  margin-top: 30px;
+
+  display: flex;
+  flex-direction: column;
+  animation: fadein 10s;
+}
+
+#instructions p {
+  margin: 10px;
+}
+
+.footer {
+  color: white;
+  margin-bottom: 20px;
+  animation: fadein 10s;
+}
+
+/* COMPATIBILITY FOR ANIMATIONS */
+
+@-webkit-keyframes gradient {
+  0% {
+    background-position: 0% 0%;
+  }
+  50% {
+    background-position: 100% 0%;
+  }
+  100% {
+    background-position: 0% 0%;
+  }
+}
+
+@-moz-keyframes gradient {
+  0% {
+    background-position: 0% 0%;
+  }
+  50% {
+    background-position: 100% 0%;
+  }
+  100% {
+    background-position: 0% 0%;
+  }
+}
+
+@-ms-keyframes gradient {
+  0% {
+    background-position: 0% 0%;
+  }
+  50% {
+    background-position: 100% 0%;
+  }
+  100% {
+    background-position: 0% 0%;
+  }
+}
+
+@-o-keyframes gradient {
+  0% {
+    background-position: 0% 0%;
+  }
+  50% {
+    background-position: 100% 0%;
+  }
+  100% {
+    background-position: 0% 0%;
+  }
 }
