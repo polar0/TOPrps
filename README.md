@@ -8,5 +8,6 @@ New skills :
 - Basic CSS and HTML
 - Flexbox, page layout
 - Javascript basics, debugging and understanding errors
+- Interaction with JavaScript and animating DOM elements
 
 <a href="https://polar0.github.io/TOPrps/">Live demo</a>
